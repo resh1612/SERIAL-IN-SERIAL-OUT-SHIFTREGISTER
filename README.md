@@ -25,18 +25,48 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+Developed by: RESHMITHAA B RegisterNumber:24900030
 
-Developed by: RegisterNumber:
-
-*/
+```
+module exp11(c1k, sin , q);
+input c1k;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge c1k)
+begin 
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
+```
 
 **RTL LOGIC FOR SISO Shift Register**
 
+![WhatsApp Image 2024-12-19 at 11 20 50_a8914bc4](https://github.com/user-attachments/assets/540bf10c-a54c-48bf-a339-69067626cfff)
+
+
 **TIMING DIGRAMS FOR SISO Shift Register**
 
+![image](https://github.com/user-attachments/assets/f36fedfb-86b4-4647-9d69-f4a0fb3efa3d)
+
+
 **RESULTS**
+
+SISO Shift Register using verilog and validating their functionality using their functional tables are verified successfully.
+
+
