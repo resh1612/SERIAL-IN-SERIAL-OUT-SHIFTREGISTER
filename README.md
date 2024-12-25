@@ -40,29 +40,30 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 Developed by: RESHMITHAA B RegisterNumber:24900030
 
 ```
-module exp11(c1k, sin , q);
-input c1k;
-input sin;
-output [3:0] q;
-reg [3:0] q;
-always @(posedge c1k)
-begin 
-q[0] <= sin;
-q[1] <= q[0];
-q[2] <= q[1];
-q[3] <= q[2];
-end
-endmodule
+ module Verilog1(clk, sin, q);
+ input clk;
+ input sin;
+ output [3:0] q;
+ reg [3:0] q;
+ always @(posedge clk)
+ begin
+ q[0] <= sin;
+ q[1] <= q[0];
+ q[2] <= q[1];
+ q[3] <= q[2];
+
 ```
 
 **RTL LOGIC FOR SISO Shift Register**
 
-![WhatsApp Image 2024-12-19 at 11 20 50_a8914bc4](https://github.com/user-attachments/assets/540bf10c-a54c-48bf-a339-69067626cfff)
+![image](https://github.com/user-attachments/assets/fca1c65b-9fa8-417e-b866-2f06fa8c16a0)
+
 
 
 **TIMING DIGRAMS FOR SISO Shift Register**
 
-![image](https://github.com/user-attachments/assets/f36fedfb-86b4-4647-9d69-f4a0fb3efa3d)
+![image](https://github.com/user-attachments/assets/3cdeaf26-481f-473c-8700-a2e4de687d28)
+
 
 
 **RESULTS**
